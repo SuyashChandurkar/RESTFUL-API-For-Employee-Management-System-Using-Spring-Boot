@@ -1,0 +1,13 @@
+package com.spring.springboot.productcontroller;
+
+import org.springframework.web.bind.annotation.RestController;
+
+import com.spring.springboot.pojo.User;
+
+@RestController
+public class UserController {
+
+	public void addUser(User user) {
+		
+	}
+}

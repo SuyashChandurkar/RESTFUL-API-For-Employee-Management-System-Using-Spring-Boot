@@ -1,0 +1,19 @@
+package com.spring.springboot.productservice;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.spring.springboot.pojo.Product;
+import com.spring.springboot.productrepository.ProductRepository;
+
+@Service
+public class ProductService {
+
+	@Autowired
+private ProductRepository productRepository;
+	public Product addProduct(Product product) {
+		productRepository.save(product);
+		return product;
+	}
+
+}

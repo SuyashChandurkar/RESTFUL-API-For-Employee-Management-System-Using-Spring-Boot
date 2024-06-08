@@ -1,0 +1,41 @@
+package com.spring.springboot.productservice;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.spring.springboot.pojo.Product;
+import com.spring.springboot.productrepository.ProductRepository;
+
+@Service
+public class ProductService {
+
+	@Autowired
+private ProductRepository productRepository;
+	public Product addProduct(Product product) {
+		return  productRepository.save(product);
+		
+	}
+	public Object findProductById(long id) {
+		Optional<Product> productbyid = productRepository.findById(id);
+		System.out.println(productbyid);
+		if (productbyid.isPresent()) {
+			return productbyid.get();
+		}else {
+			return "NO Product Found Based On Id";
+		}
+	}
+	public void findAllProduct() {
+		List<Product> Products = productRepository.findAll();
+		
+		if (Products.size()>0) {
+			return Products;
+		}else {
+			return "No Products Found";
+		}
+		
+	}
+
+}

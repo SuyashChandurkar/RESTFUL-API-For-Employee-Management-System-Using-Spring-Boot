@@ -1,0 +1,23 @@
+package com.spring.springboot.productcontroller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.spring.springboot.pojo.User;
+import com.spring.springboot.productservice.UserServices;
+
+@RestController
+public class UserController {
+
+	
+	@Autowired
+	private UserServices services;
+	
+	@PostMapping("/add_user")
+	public Object addUser(@RequestBody User user) {
+			
+	 return services.addUser(user);
+	}
+}

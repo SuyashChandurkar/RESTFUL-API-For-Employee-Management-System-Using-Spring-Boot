@@ -1,0 +1,9 @@
+package com.spring.springboot.comparator;
+
+import java.util.Comparator;
+
+import com.spring.springboot.pojo.Product;
+
+public class PriceComparator implements Comparator<Product>{
+
+}

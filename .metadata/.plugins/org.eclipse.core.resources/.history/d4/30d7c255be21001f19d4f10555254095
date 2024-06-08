@@ -1,0 +1,11 @@
+package com.spring.springboot.productservice;
+
+import org.springframework.stereotype.Service;
+
+import com.spring.springboot.productrepository.UserRepository;
+
+@Service
+public class UserServices {
+
+private UserRepository repository;
+}

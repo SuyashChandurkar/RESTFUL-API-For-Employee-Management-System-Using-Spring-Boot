@@ -1,0 +1,16 @@
+package com.spring.springboot.pojo;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name="user_info_springboot")
+public class User {
+
+	@id
+	private long id;
+	private String email;
+	private long mobile;
+	private String password;
+	
+}

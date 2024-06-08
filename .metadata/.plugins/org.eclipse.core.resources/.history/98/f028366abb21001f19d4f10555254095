@@ -1,0 +1,11 @@
+package com.spring.springboot.pojo;
+
+public class User {
+
+	
+	private long id;
+	private String email;
+	private long mobile;
+	private String password;
+	
+}
